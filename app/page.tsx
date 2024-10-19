@@ -12,12 +12,12 @@ export default function Home() {
   return (
     <main className="bg-black-100 overflow-clip mx-auto sm:px-10 px-5 ">
       <div className="relative w-full max-w-7xl flex justify-center items-center flex-col">
-        {/*<FloatingNav navItems={navItems} />*/}
+        <FloatingNav navItems={navItems} />
         <Hero />
         <Grid />
         <Skills />
-        <RecentProjects />
         <Experience />
+        <RecentProjects />
         <Contact />
         <Footer />
       </div>
