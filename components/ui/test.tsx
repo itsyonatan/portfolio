@@ -148,6 +148,22 @@ export function Globe({ globeConfig, data }: WorldProps) {
     setGlobeData(filteredPoints);
   };
 
+  useEffect(() => {
+    if (globeRef.current && globeData) {
+      globeRef.current
+        .hexPolygonsData(countries.features)
+        .hexPolygonResolution(3)
+        .hexPolygonMargin(0.7)
+        .showAtmosphere(defaultProps.showAtmosphere)
+        .atmosphereColor(defaultProps.atmosphereColor)
+        .atmosphereAltitude(defaultProps.atmosphereAltitude)
+        .hexPolygonColor(() => {
+          return defaultProps.polygonColor;
+        });
+      startAnimation();
+    }
+  }, [globeData, startAnimation]);
+
   const startAnimation = () => {
     if (!globeRef.current || !globeData) return;
 
@@ -161,13 +177,13 @@ export function Globe({ globeConfig, data }: WorldProps) {
       .arcAltitude((e) => {
         return (e as { arcAlt: number }).arcAlt * 1;
       })
-      .arcStroke(() => {
+      .arcStroke((e) => {
         return [0.32, 0.28, 0.3][Math.round(Math.random() * 2)];
       })
       .arcDashLength(defaultProps.arcLength)
       .arcDashInitialGap((e) => (e as { order: number }).order * 1)
       .arcDashGap(15)
-      .arcDashAnimateTime(() => defaultProps.arcTime);
+      .arcDashAnimateTime((e) => defaultProps.arcTime);
 
     globeRef.current
       .pointsData(data)
@@ -185,23 +201,6 @@ export function Globe({ globeConfig, data }: WorldProps) {
         (defaultProps.arcTime * defaultProps.arcLength) / defaultProps.rings
       );
   };
-  useEffect(() => {
-    if (globeRef.current && globeData) {
-      globeRef.current
-        .hexPolygonsData(countries.features)
-        .hexPolygonResolution(3)
-        .hexPolygonMargin(0.7)
-        .showAtmosphere(defaultProps.showAtmosphere)
-        .atmosphereColor(defaultProps.atmosphereColor)
-        .atmosphereAltitude(defaultProps.atmosphereAltitude)
-        .hexPolygonColor(() => {
-          return defaultProps.polygonColor;
-        });
-      startAnimation();
-    }
-  }, [globeData, startAnimation, defaultProps.showAtmosphere, defaultProps.atmosphereColor, 
-    defaultProps.atmosphereAltitude, defaultProps.polygonColor
-  ]);
 
   useEffect(() => {
     if (!globeRef.current || !globeData) return;
@@ -222,7 +221,7 @@ export function Globe({ globeConfig, data }: WorldProps) {
     return () => {
       clearInterval(interval);
     };
-  }, [data.length, globeData]);
+  }, [globeRef.current, globeData]);
 
   return (
     <>
@@ -238,7 +237,7 @@ export function WebGLRendererConfig() {
     gl.setPixelRatio(window.devicePixelRatio);
     gl.setSize(size.width, size.height);
     gl.setClearColor(0xffaaff, 0);
-  }, [gl, size.width, size.height]);
+  }, []);
 
   return null;
 }
@@ -280,12 +279,12 @@ export function World(props: WorldProps) {
 }
 
 export function hexToRgb(hex: string) {
-  const shorthandRegex = /^#?([a-f\d])([a-f\d])([a-f\d])$/i;
+  var shorthandRegex = /^#?([a-f\d])([a-f\d])([a-f\d])$/i;
   hex = hex.replace(shorthandRegex, function (m, r, g, b) {
     return r + r + g + g + b + b;
   });
 
-  const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
+  var result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
   return result
     ? {
         r: parseInt(result[1], 16),
