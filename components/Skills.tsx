@@ -14,7 +14,7 @@ const Skills = () => {
         {
           words.map((word, i) => (
             <div  key={i} className="inline-block mb-1">
-              <FlipWords words={[word]} duration={Math.floor(Math.random() * 10000) + 10000} className="py-0.5 pl-3 mr-3 mb-2 flex justify-center items-center backdrop-filter backdrop-blur-lg saturate-180 bg-opacity-100 bg-black-100 rounded-lg border border-black-200"/>
+              <FlipWords words={[word]} duration={10000} className="py-0.5 pl-3 mr-3 mb-2 flex justify-center items-center backdrop-filter backdrop-blur-lg saturate-180 bg-opacity-100 bg-black-100 rounded-lg border border-black-200"/>
             </div>
           ))
         }

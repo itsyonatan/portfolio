@@ -92,9 +92,9 @@ export const projects = [
   },
   {
     id: 3,
-    title: "Fluid AI",
-    des: "figma design of Fluid AI, disign to simplify and streamline modern life..",
-    img: "/FAI.png",
+    title: "Project Management System",
+    des: "system for managing clients and projects..",
+    img: "/PMS.png",
     iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/fm.svg", "/three.svg"],
     linkTitle: "/fluidai.com",
     link: "https://hospitalmedicalsystem.com",
