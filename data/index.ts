@@ -2,8 +2,8 @@
 export const navItems = [
   { name: "Home", link: "#home" },
   { name: "Skills", link: "#skills" },
-  { name: "Experience", link: "#experience" },
   { name: "Projects", link: "#projects" },
+  { name: "Experience", link: "#experience" },
   { name: "Contact", link: "#contact" },
 ];
 
@@ -86,7 +86,7 @@ export const projects = [
     title: "Lampab - Design",
     des: "provide distinctive, best interior design and finishing services.",
     img: "/Lampab.png",
-    iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/fm.svg"],
+    iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/fm.svg", "/three.svg"],
     linkTitle: "/lampab.com",
     link: "https://lampab.com",
   },
@@ -95,8 +95,8 @@ export const projects = [
     title: "Project Management System",
     des: "system for managing clients and projects..",
     img: "/PMS.png",
-    iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/fm.svg", "/three.svg"],
-    linkTitle: "/fluidai.com",
+    iconLists: ["/re.svg", "/tail.svg", "/js.svg", "/node.svg", "/mongodb.svg"],
+    linkTitle: "/projectmanager.com",
     link: "https://hospitalmedicalsystem.com",
   },
   {
@@ -104,7 +104,7 @@ export const projects = [
     title: "Hospital Medical System",
     des: "Integrate healthcare solutions which includes patient care management, schedule online appointments, and more.",
     img: "/HMS.png",
-    iconLists: ["/html.svg", "/css.svg", "/php.svg"],
+    iconLists: ["/html.svg", "/css.svg", "/php.svg", "/mysql.svg"],
     linkTitle: "/hospitalmedicalsystem.com",
     link: "https://hospitalmedicalsystem.com",
   },
@@ -117,6 +117,7 @@ export const workExperience = [
     desc: "Assisted in the development of a web-based platform using React.js, enhancing interactivity.",
     className: "md:col-span-2",
     thumbnail: "/exp1.svg",
+    delay: 0,
   },
   {
     id: 2,
@@ -124,6 +125,7 @@ export const workExperience = [
     desc: "Developed and maintained user-facing features using modern frontend technologies.",
     className: "md:col-span-2",
     thumbnail: "/exp2.svg",
+    delay: 0.2,
   },
 ];
 
@@ -141,7 +143,7 @@ export const socialMedia = [
   {
     id: 3,
     icon: "/telegram.svg",
-    link: "https://t.me/@yohna11",
+    link: "https://t.me/yohna11",
   },
   {
     id: 4,

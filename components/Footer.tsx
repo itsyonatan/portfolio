@@ -7,7 +7,7 @@ const Footer = () => {
       <div className="flex md:flex-row flex-col justify-between gap-12 ">
         <div className="md:max-w-[40vw]">
           <h2 className="uppercase mb-6 font-bold text-lg tracking-wider md:tracking-widest">yonatan adera</h2>
-          <p className="text-white-200">A Result-Oriented Web Developer building and managing Websites and Web Applications that leads to the success of the overall product</p>
+          <p className="text-white-200">A Result-Oriented Web Developer building and managing Websites and Web Applications that leads to the success of the overall product.</p>
         </div>
         <div className=" flex flex-col gap-6 ">
           <h2 className="uppercase font-bold text-lg tracking-wider">social</h2>

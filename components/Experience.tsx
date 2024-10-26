@@ -3,7 +3,25 @@ import React from "react";
 import { workExperience } from "@/data";
 import { Button } from "./ui/MovingBorders";
 import Image from "next/image";
+import { motion, Variants } from 'framer-motion'
 
+const scaleVariant: Variants = {
+  initial: {
+    opacity: 0,
+    scale: 0.8,
+  },
+  animate: (custom: number) => ({
+    opacity: 1,
+    scale: 1,
+    transition: {
+      delay: custom,
+      type: "spring",
+      stiffness: 100,
+      damping: 10,
+      when: "afterChildren"
+    }
+  }),
+}
 const Experience = () => {
   return (
     <div className="py-10 md:py-16 w-full max-w-[80vw]" id="experience">
@@ -30,7 +48,13 @@ const Experience = () => {
             // remove bg-white dark:bg-slate-900
             className="flex-1 text-black dark:text-white border-neutral-200 dark:border-slate-800"
           >
-            <div className="flex md:flex-row flex-col lg:items-center p-3 py-6 md:p-5 gap-2">
+            <motion.div
+              variants={scaleVariant}
+              initial='initial'
+              whileInView='animate'
+              viewport={{once: true}}
+              custom={card.delay}
+              className="flex md:flex-row flex-col lg:items-center p-3 py-6 md:p-5 gap-2">
               <Image
                 src={card.thumbnail}
                 alt={card.thumbnail}
@@ -46,7 +70,7 @@ const Experience = () => {
                   {card.desc}
                 </p>
               </div>
-            </div>
+            </motion.div>
           </Button>
         ))}
       </div>
