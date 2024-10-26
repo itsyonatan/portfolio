@@ -34,7 +34,7 @@ const RecentProjects = () => {
                   height={1000}
                   src={item.img}
                   alt="cover"
-                  className="z-10 absolute bottom-0 object-cover w-full h-full object-top"
+                  className={`z-10 absolute bottom-0 object-cover w-full h-full ${item.id === 3 ? 'object-left' : 'object-top'}`}
                 />
               </div>
 

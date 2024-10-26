@@ -76,7 +76,7 @@ export const projects = [
     id: 1,
     title: "Ethio-Jazz Musician",
     des: "Artistic website to showcase the music journey and live sessions of the artist.",
-    img: "/gg.png",
+    img: "/GG.png",
     iconLists: ["/re.svg", "/tail.svg", "/js.svg"],
     linkTitle: "/girumgizaw.com",
     link: "https://girumgizaw.com",
