@@ -17,7 +17,7 @@ export default function Home() {
   useEffect(() => {
     setTimeout(() => {
       setPending(false)
-    }, 700)
+    }, 400)
   })
   return (
     <main className="bg-black-100 overflow-clip mx-auto sm:px-10 px-5 ">
