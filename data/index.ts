@@ -72,14 +72,23 @@ export const gridItems = [
 ];
 
 export const projects = [
+  // {
+  //   id: 1,
+  //   title: "Ethio-Jazz Musician",
+  //   des: "Artistic website to showcase the music journey and live sessions of the artist.",
+  //   img: "/GG.png",
+  //   iconLists: ["/re.svg", "/tail.svg", "/js.svg"],
+  //   linkTitle: "/girumgizaw.com",
+  //   link: "https://girumgizaw.com",
+  // },
   {
     id: 1,
-    title: "Ethio-Jazz Musician",
-    des: "Artistic website to showcase the music journey and live sessions of the artist.",
-    img: "/GG.png",
-    iconLists: ["/re.svg", "/tail.svg", "/js.svg"],
-    linkTitle: "/girumgizaw.com",
-    link: "https://girumgizaw.com",
+    title: "Melajobs job posts managment system",
+    des: "Admin dashboard that manages the job posts and job applications",
+    img: "/melajobs dashboard.png",
+    iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/mysql.svg", "/three.svg"],
+    linkTitle: "/melajobs.com",
+    link: "https://melajobs.com",
   },
   {
     id: 2,
@@ -108,21 +117,41 @@ export const projects = [
     linkTitle: "/hospitalmedicalsystem.com",
     link: "https://hospitalmedicalsystem.com",
   },
+  //   {
+  //   id: 5,
+  //   title: "Melajobs job posts managment system",
+  //   des: "provide distinctive, best interior design and finishing services.",
+  //   img: "/melajobs dashboard.png",
+  //   iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/mysql.svg", "/three.svg"],
+  //   linkTitle: "/melajobs.com",
+  //   link: "https://melajobs.com",
+  // },
+  //   {
+  //   id: 6,
+  //   title: "melajobs app",
+  //   des: "provide distinctive, best interior design and finishing services.",
+  //   img: "/melajobs app.jpg",
+  //   iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/fm.svg", "/three.svg"],
+  //   linkTitle: "/lampab.com",
+  //   link: "https://lampab.com",
+  // },
 ];
 
 export const workExperience = [
   {
     id: 1,
-    title: "Frontend Engineer Intern",
-    desc: "Assisted in the development of a web-based platform using React.js, enhancing interactivity.",
+    title: "BarokTech plc",
+    company: "Frontend Developer",
+    desc: "Frontend development using Next.js and React; built responsive, accessible UIs, integrated REST APIs, and optimized performance to enhance user experience.",
     className: "md:col-span-2",
     thumbnail: "/exp1.svg",
     delay: 0,
   },
   {
     id: 2,
-    title: "Web Developer",
-    desc: "Developed and maintained user-facing features using modern frontend technologies.",
+    title: "Marvels creative technology",
+    company: "Software Developer",
+    desc: "Full-stack Developer — developed and maintained frontend features and backend services using modern frameworks and Node.js, worked on API design, data modeling, and deployment.",
     className: "md:col-span-2",
     thumbnail: "/exp2.svg",
     delay: 0.2,

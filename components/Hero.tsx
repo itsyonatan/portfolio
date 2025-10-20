@@ -51,7 +51,7 @@ const Hero = () => {
           animate='animate'
           custom={0}
           className='text-base sm:text-xl text-center text-blue-100 capitalize md:tracking-wide'>
-          hi! i&apos;m yonatan adera, a web developer.
+          hi! i&apos;m yonatan adera, a Software developer.
         </motion.p>
         <motion.div
           variants={upVariant}

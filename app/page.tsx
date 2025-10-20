@@ -13,14 +13,14 @@ import { PuffLoader } from "react-spinners";
 
 export default function Home() {
 
-  const [pending, setPending] = useState(true)
-  useEffect(() => {
-    setTimeout(() => {
-      setPending(false)
-    }, 400)
-  })
+  const [pending, setPending] = useState(false)
+  // useEffect(() => {
+  //   setTimeout(() => {
+  //     setPending(false)
+  //   }, 400)
+  // })
   return (
-    <main className="bg-black-100 overflow-clip mx-auto sm:px-10 px-5 ">
+    <div className="bg-black-100 overflow-clip sm:px-10 px-5 flex justify-center items-center">
       {pending ? (
         <div className="relative w-full h-[100vh] flex justify-center items-center">
           <PuffLoader color="#4066ff"/>
@@ -35,6 +35,6 @@ export default function Home() {
           <Contact />
           <Footer />
         </div>)}
-    </main>
+    </div>
   );
 }
