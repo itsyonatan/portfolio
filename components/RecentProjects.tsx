@@ -33,8 +33,8 @@ const RecentProjects = () => {
                   width={1000}
                   height={1000}
                   src={item.img}
-                  alt="cover"
-                  className={`z-10 absolute bottom-0 object-cover w-full h-full ${item.id === 3 ? 'object-left' : 'object-top'}`}
+                  alt="recent project"
+                  className={`z-10 absolute bottom-0 object-cover w-full h-full ${item.id === 3 || item.id === 1 ? 'object-left' : 'object-top'}`}
                 />
               </div>
 
@@ -57,7 +57,7 @@ const RecentProjects = () => {
                   {item.iconLists.map((icon, index) => (
                     <div
                       key={index}
-                      className="border border-white/[.2] rounded-full bg-black lg:w-10 lg:h-10 w-8 h-8 flex justify-center items-center"
+                      className="border border-white/[.2] rounded-full bg-blue-900 lg:w-10 lg:h-10 w-8 h-8 flex justify-center items-center"
                       style={{
                         transform: `translateX(-${5 * index + 2}px)`,
                       }}

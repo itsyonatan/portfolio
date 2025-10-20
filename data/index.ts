@@ -86,7 +86,7 @@ export const projects = [
     title: "Melajobs job posts managment system",
     des: "Admin dashboard that manages the job posts and job applications",
     img: "/melajobs dashboard.png",
-    iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/mysql.svg", "/three.svg"],
+    iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/mysql.svg", "/prisma-2.svg"],
     linkTitle: "/melajobs.com",
     link: "https://melajobs.com",
   },
