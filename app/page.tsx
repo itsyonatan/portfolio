@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import Grid from "@/components/Grid";
 import Hero from "@/components/Hero";
 import Experience from "@/components/Experience";
@@ -12,19 +12,19 @@ import { useEffect, useState } from "react";
 import { PuffLoader } from "react-spinners";
 
 export default function Home() {
-
-  const [pending, setPending] = useState(true)
+  const [pending, setPending] = useState(true);
   useEffect(() => {
     setTimeout(() => {
-      setPending(false)
-    }, 400)
-  })
+      setPending(false);
+    }, 400);
+  });
   return (
     <div className="bg-black-100 overflow-clip sm:px-10 px-5 flex justify-center items-center">
       {pending ? (
         <div className="relative w-full h-[100vh] flex justify-center items-center">
-          <PuffLoader color="#4066ff"/>
-        </div>) : (
+          <PuffLoader color="#4066ff" />
+        </div>
+      ) : (
         <div className="relative w-full max-w-7xl flex justify-center items-center flex-col">
           <FloatingNav navItems={navItems} />
           <Hero />
@@ -34,7 +34,8 @@ export default function Home() {
           <Experience />
           <Contact />
           <Footer />
-        </div>)}
+        </div>
+      )}
     </div>
   );
 }
