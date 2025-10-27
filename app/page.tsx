@@ -1,5 +1,5 @@
 "use client";
-import Grid from "@/components/Grid";
+
 import Hero from "@/components/Hero";
 import Experience from "@/components/Experience";
 import RecentProjects from "@/components/RecentProjects";
@@ -10,6 +10,8 @@ import Skills from "@/components/Skills";
 import Contact from "@/components/Contact";
 import { useEffect, useState } from "react";
 import { PuffLoader } from "react-spinners";
+import dynamic from "next/dynamic";
+const Grid = dynamic(() => import("@/components/Grid"), { ssr: false });
 
 export default function Home() {
   const [pending, setPending] = useState(true);
