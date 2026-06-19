@@ -86,4 +86,26 @@
   .black-gradient {
     background: linear-gradient(90deg, #161a31 0%, #06091f 100%);
   }
+
+  @keyframes text-gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+  .animate-text-gradient {
+    background: linear-gradient(to right, #cbacf9, #b983ff, #007aff, #00d2c4, #cbacf9);
+    background-size: 300% auto;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+    animation: text-gradient 8s ease infinite;
+  }
 }

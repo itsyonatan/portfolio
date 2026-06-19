@@ -28,7 +28,7 @@ const Footer = () => {
 
       <div className="mt-16 md:mt-20">
         <p className="md:text-base text-sm md:font-normal font-light text-center">
-        © Copyright 2024. <span className="text-blue-100 ">Yonatan Adera</span>
+          <span>{new Date().getFullYear()}</span>. <span className="text-blue-100 ">Developed by Yonatan Adera</span>
         </p>
       </div>
     </footer>

@@ -1,0 +1,8 @@
+<svg fill="#00C49F" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+  <title>Recharts</title>
+  <path d="M3 3v18h18" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round"/>
+  <path d="M7 17v-6" fill="none" stroke="#FFBB28" stroke-width="3" stroke-linecap="round"/>
+  <path d="M12 17V5" fill="none" stroke="#00C49F" stroke-width="3" stroke-linecap="round"/>
+  <path d="M17 17V9" fill="none" stroke="#0088FE" stroke-width="3" stroke-linecap="round"/>
+  <path d="M3 13l4-4 5 4 5-8" fill="none" stroke="#FF8042" stroke-width="2" stroke-linecap="round"/>
+</svg>

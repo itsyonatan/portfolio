@@ -41,17 +41,25 @@ const Hero = () => {
         />
       </div>
       <div className='flex flex-col justify-center items-center gap-4 w-full md:max-w-[80vw] z-10'>
-        <TextGenerateEffect
-          words="Transforming Concepts into Seamless User Experiences"
-          className="text-center text-3xl md:text-4xl lg:text-5xl capitalize max-w-[80%]"
-        />
         <motion.p
           variants={upVariant}
           initial='initial'
           animate='animate'
           custom={0}
-          className='text-base sm:text-xl text-center text-blue-100 capitalize md:tracking-wide'>
-          hi! i&apos;m yonatan adera, a Software developer.
+          className='text-xl font-semibold uppercase tracking-widest text-center max-w-xl animate-text-gradient'>
+          Full-Stack Software Engineer
+        </motion.p>
+        <TextGenerateEffect
+          words="hello, this is yonatan adera"
+          className="text-center text-3xl md:text-5xl capitalize max-w-[80%]"
+        />
+        <motion.p
+          variants={upVariant}
+          initial='initial'
+          animate='animate'
+          custom={0.1}
+          className='text-sm sm:text-base text-center text-blue-100/80 md:tracking-wide max-w-[90%] md:max-w-[80%] leading-relaxed mt-2'>
+          A Full-Stack Software Engineer with 2+ years of experience crafting scalable web and mobile applications. Specializing in end-to-end SaaS, CRM, and cross-platform solutions designed for performance and scale.
         </motion.p>
         <motion.div
           variants={upVariant}

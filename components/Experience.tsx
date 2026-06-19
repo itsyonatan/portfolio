@@ -29,7 +29,7 @@ const Experience = () => {
         My <span className="text-purple">work experience</span>
       </h1>
 
-      <div className="w-full mt-12 grid lg:grid-cols-4 grid-cols-1 gap-10">
+      <div className="w-full mt-12 flex flex-col gap-6">
         {workExperience.map((card) => (
           <Button
             key={card.id}
@@ -45,6 +45,7 @@ const Experience = () => {
               // add this border radius to make it more rounded so that the moving border is more realistic
               borderRadius: `calc(1.75rem* 0.96)`,
             }}
+            containerClassName={card.className}
             // remove bg-white dark:bg-slate-900
             className="flex-1 text-black dark:text-white border-neutral-200 dark:border-slate-800"
           >
@@ -54,7 +55,7 @@ const Experience = () => {
               whileInView='animate'
               viewport={{once: true}}
               custom={card.delay}
-              className="flex md:flex-row flex-col lg:items-center p-3 py-6 md:p-5 gap-2">
+              className="flex md:flex-row flex-col lg:items-center p-3 py-6 md:p-5 gap-2 w-full h-full">
               <Image
                 src={card.thumbnail}
                 alt={card.thumbnail}
@@ -62,16 +63,26 @@ const Experience = () => {
                 height={100}
                 className="lg:w-32 md:w-20 w-16"
               />
-              <div className="lg:ms-5">
+              <div className="lg:ms-5 flex-1">
                 <h1 className="text-start text-xl font-bold capitalize">
                   {card.title}
                 </h1>
-                <h2 className="text-start text-base capitalize">
+                <h2 className="text-start text-base text-purple font-semibold mt-1">
                   {card.company}
                 </h2>
-                <p className="text-start text-white-100 mt-3 font-semibold">
-                  {card.desc}
-                </p>
+                {Array.isArray(card.desc) ? (
+                  <ul className="text-start text-white-100 mt-3 list-disc list-outside pl-4 space-y-1.5 font-normal text-sm">
+                    {card.desc.map((bullet, idx) => (
+                      <li key={idx}>
+                        {bullet}
+                      </li>
+                    ))}
+                  </ul>
+                ) : (
+                  <p className="text-start text-white-100 mt-3 font-semibold text-sm">
+                    {card.desc}
+                  </p>
+                )}
               </div>
             </motion.div>
           </Button>

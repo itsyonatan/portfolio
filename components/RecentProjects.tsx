@@ -12,17 +12,17 @@ const RecentProjects = () => {
         recent{" "}
         <span className="text-purple">Projects</span>
       </h1>
-      <div className="flex flex-wrap items-center justify-center p-4 gap-16 mt-4">
+      <div className="flex flex-wrap items-center justify-center p-4 gap-12 mt-4">
         {projects.map((item) => (
           <div
-            className="lg:min-h-[20rem] h-[25rem] flex items-center justify-center sm:w-96 w-[80vw]"
+            className="lg:min-h-[32.5rem h-[26rem] flex items-center justify-center sm:w-[540px] w-[80vw]"
             key={item.id}
           >
             <PinContainer
               title={item.linkTitle}
               href={item.link}
             >
-              <div className="relative flex items-center justify-center sm:w-96 w-[80vw] overflow-hidden h-[30vh]">
+              <div className="relative flex items-center justify-center sm:w-[470px] w-[80vw] overflow-hidden h-[30vh]">
                 <div
                   className="relative w-full h-full overflow-hidden lg:rounded-3xl"
                   style={{ backgroundColor: "#02040fff" }}
@@ -34,16 +34,16 @@ const RecentProjects = () => {
                   height={1000}
                   src={item.img}
                   alt="recent project"
-                  className={`z-10 absolute bottom-0 object-cover w-full h-full ${item.id === 3 || item.id === 1 ? 'object-left' : 'object-top'}`}
+                  className={`z-10 absolute bottom-0 object-cover w-full h-full ${item.imgClassName || 'object-top'}`}
                 />
               </div>
 
-              <h1 className="font-bold text-xl  line-clamp-1 mt-2">
+              <h1 className="font-bold lg:text-lg md:text-base text-sm line-clamp-1 mt-3">
                 {item.title}
               </h1>
 
               <p
-                className="lg:text-lg lg:font-normal font-light text-base line-clamp-2 capitalize"
+                className="lg:text-xs lg:font-normal font-light text-[16px] line-clamp-4"
                 style={{
                   color: "#BEC1DD",
                   margin: "1vh 0",
@@ -52,26 +52,26 @@ const RecentProjects = () => {
                 {item.des}
               </p>
 
-              <div className="flex items-center justify-between mt-7 mb-3">
+              <div className="flex items-center justify-between mt-5 mb-3">
                 <div className="flex items-center">
                   {item.iconLists.map((icon, index) => (
                     <div
                       key={index}
-                      className="border border-white/[.2] rounded-full bg-blue-900 lg:w-10 lg:h-10 w-8 h-8 flex justify-center items-center"
+                      className="border border-white/[.2] rounded-full bg-blue-900 lg:w-8 lg:h-8 w-6 h-6 flex justify-center items-center"
                       style={{
                         transform: `translateX(-${5 * index + 2}px)`,
                       }}
                     >
-                      <Image width={100} height={100} src={icon} alt="icon5" className="p-2" />
+                      <Image width={100} height={100} src={icon} alt="icon5" className="p-1.5" />
                     </div>
                   ))}
                 </div>
 
                 <div className="flex justify-center items-center">
-                  <p className="flex lg:text-xl md:text-xs text-sm text-purple">
+                  <p className="flex lg:text-sm md:text-xs text-[10px] text-purple">
                     Check Live Site
                   </p>
-                  <FaLocationArrow className="ms-3" color="#CBACF9" />
+                  <FaLocationArrow className="ms-2 lg:w-3 lg:h-3 w-2 h-2" color="#CBACF9" />
                 </div>
               </div>
             </PinContainer>
